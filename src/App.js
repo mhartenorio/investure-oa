@@ -37,6 +37,7 @@ function App() {
                 <Grid container mb={2}>
                     <Typography variant="h4" fontFamily="noe">S&amp;P 500 Daily Return</Typography>
                 </Grid>
+                {/* Ensure that we have already parsed the data and set the state before we render our tables and graphs */}
                 {data.length > 0 &&
                     <>
                         <DataTable data={data} />

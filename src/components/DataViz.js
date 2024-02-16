@@ -6,6 +6,8 @@ export default function DataViz({ inpData }) {
     const [xLabels, setXLabels] = useState([]);
     const [yLabels, setYLabels] = useState([]);
 
+    // When the component mounts, get a list of the values of the x and y fields
+    // so we don't have to recompute this list each time. 
     useEffect(() => {
         setXLabels(inpData.map(d => d.ReferenceDate));
         setYLabels(inpData.map(d => d.TotalReturn));
@@ -20,6 +22,7 @@ export default function DataViz({ inpData }) {
                 This data visualization provides an interactive chart of our data above. If we hover over any datapoints then we will see the date and total return for that datapoint (in %).
             </Typography>
             <br />
+            {/* Ensure that we have already set the x, y label states */}
             {xLabels.length > 0 && yLabels.length > 0 &&
                 <LineChart
                     xAxis={[{
