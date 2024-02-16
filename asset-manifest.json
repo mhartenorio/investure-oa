@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/investure-oa/static/css/main.f465669f.css",
+    "main.js": "/investure-oa/static/js/main.ca1502e1.js",
+    "static/js/453.8d2fefc5.chunk.js": "/investure-oa/static/js/453.8d2fefc5.chunk.js",
+    "static/media/rawdata.csv": "/investure-oa/static/media/rawdata.08db8975e29a1ad9d708.csv",
+    "static/media/NoeDisplay-Medium.otf": "/investure-oa/static/media/NoeDisplay-Medium.0fa1006407c6c1365451.otf",
+    "static/media/NoeDisplay-Regular.otf": "/investure-oa/static/media/NoeDisplay-Regular.5034b5afe209bffe49db.otf",
+    "static/media/investure-logo.svg": "/investure-oa/static/media/investure-logo.cc4315f9a41a28d2526ed3470ac28f1a.svg",
+    "index.html": "/investure-oa/index.html",
+    "main.f465669f.css.map": "/investure-oa/static/css/main.f465669f.css.map",
+    "main.ca1502e1.js.map": "/investure-oa/static/js/main.ca1502e1.js.map",
+    "453.8d2fefc5.chunk.js.map": "/investure-oa/static/js/453.8d2fefc5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f465669f.css",
+    "static/js/main.ca1502e1.js"
+  ]
+}
