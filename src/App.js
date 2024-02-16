@@ -5,8 +5,7 @@ import rawdata from './data/rawdata.csv'
 import { useEffect, useState } from 'react';
 import Papa from 'papaparse';
 import DataTable from './components/DataTable';
-
-
+import DataViz from './components/DataViz';
 
 function App() {
     const [data, setData] = useState([]);
@@ -19,9 +18,11 @@ function App() {
             header: true, // Turns it into an object with the header as the keys. 
             complete: function (input) {
                 let runningProduct = 1; // Running product for totalReturn
-                input.data.map((inp) => {
-                    const add1InPercentSpace = 1 + (inp.DailyReturn/100 )
-                    inp.TotalReturn = ((runningProduct * add1InPercentSpace) - 1) * 100 // Turns it to a percent value
+                input.data.map((inp, idx) => {
+                    const add1InPercentSpace = 1 + (inp.DailyReturn / 100)
+                    inp.TotalReturn = ((runningProduct * add1InPercentSpace) - 1) * 100; // Turns it to a percent value
+                    inp.id = idx;
+                    inp.ReferenceDate = new Date(inp.ReferenceDate);
                     runningProduct *= add1InPercentSpace;
                 });
                 setData(input.data);
@@ -36,7 +37,14 @@ function App() {
                 <Grid container mb={2}>
                     <Typography variant="h4" fontFamily="noe">S&amp;P 500 Daily Return</Typography>
                 </Grid>
-                {/* <DataTable data={data}/> */}
+                {data.length > 0 &&
+                    <>
+                        <DataTable data={data} />
+                        <br />
+                        <DataViz inpData={data} />
+                        <br />
+                    </>
+                }
             </Container>
             <Grid container>
 
