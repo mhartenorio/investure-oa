@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+    font-family: 'noe';
+    font-weight: 700;
+    src: local('noe'), url(./assets/NoeDisplay-Medium.otf) format('opentype');
+  }
+
+
+@font-face {
+    font-family: 'noe';
+    src: local('noe'), url(./assets/NoeDisplay-Regular.otf) format('opentype');
+  }
